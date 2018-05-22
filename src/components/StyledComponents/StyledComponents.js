@@ -6,6 +6,9 @@ export const AnswerContainer = styled.form`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(to bottom right, red, blue);
 `;
 
 export const Question = styled.h2`
@@ -36,7 +39,7 @@ export const StyledInput = styled.input`
 `;
 
 export const AppCard = styled.section`
-  width: 80%;
+  width: 100%;
   height: 100vh;
   margin: 0 auto;
   display: flex;

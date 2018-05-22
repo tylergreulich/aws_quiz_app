@@ -2,6 +2,14 @@
   animation: sectionExit 0.3s ease-in forwards;
 }
 
+.fade-slide-enter.fade-slide-enter-active {
+  animation: sectionExit 0.3s ease-in reverse;
+}
+
+.fade-in-enter.fade-in-enter-active {
+  animation: sectionEnter 0.3s ease-in;
+}
+
 @keyframes sectionExit {
   0% {
     opacity: 1;
@@ -11,6 +19,19 @@
   100% {
     opacity: 0;
     transform: translateY(-100%);
+    visibility: hidden;
+  }
+}
+
+@keyframes sectionEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
     visibility: hidden;
   }
 }
@@ -25,10 +46,5 @@
 }
 
 .green {
-  background-color: green;
-}
-
-.nocolor {
-  background-color: white;
-  transition: background-color 0.4s ease-in;
+  background: linear-gradient(to bottom right, red, blue);
 }
