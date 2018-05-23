@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { CSSTransition, Transition } from 'react-transition-group';
+import { Transition } from 'react-transition-group';
 import { AnswerContainer } from './StyledComponents/StyledComponents';
 import { InputOne, InputTwo, InputThree, InputFour } from './Answer/Inputs';
 import Answer from './Answer/Answer';

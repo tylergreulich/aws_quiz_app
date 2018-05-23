@@ -8,7 +8,7 @@ export const AnswerContainer = styled.form`
   height: 100vh;
   width: 100%;
   margin: 0 auto;
-  background: linear-gradient(to bottom right, red, blue);
+  background: linear-gradient(to right, #c33764, #1d2671);
 `;
 
 export const Question = styled.h2`
@@ -16,6 +16,7 @@ export const Question = styled.h2`
   padding: 0 9rem;
   display: flex;
   justify-content: center;
+  color: #e4e5e6;
 `;
 
 export const QuestionContainer = styled.section`
@@ -62,9 +63,13 @@ export const TitleContainer = styled.div`
 
 export const Title = styled.h2`
   font-size: 4.4rem;
+  color: #e4e5e6;
+  letter-spacing: 0.15rem;
 `;
 
-export const Countdown = Title.extend``;
+export const Countdown = Title.extend`
+  font-size: 6rem;
+`;
 
 export const ToggleContainer = styled.div`
   display: flex;
@@ -73,8 +78,22 @@ export const ToggleContainer = styled.div`
 `;
 
 export const ToggleButton = styled.a`
-  padding: 1rem 4rem;
+  padding: 2rem 5rem;
   border: none;
+  text-transform: uppercase;
+  font-size: 1.1rem;
   background-color: #eee;
   cursor: pointer;
+  border-radius: 3rem;
+  box-shadow: 0px 3px 17px -2px rgba(0, 0, 0, 0.75);
+
+  &:active {
+    background-color: #c1c1c1;
+    outline: none;
+  }
+
+  &:focus {
+    background-color: #c1c1c1;
+    outline: none;
+  }
 `;
