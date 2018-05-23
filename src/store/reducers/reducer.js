@@ -9,7 +9,6 @@ const reducer = (state = initialState, action) => {
         ...state,
         score: state.score + action.val
       };
-
     default:
       return state;
   }

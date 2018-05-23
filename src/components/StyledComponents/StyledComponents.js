@@ -18,6 +18,11 @@ export const Question = styled.h2`
   justify-content: center;
 `;
 
+export const QuestionContainer = styled.section`
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+`;
+
 export const StyledInput = styled.input`
   height: 3rem;
   width: 3rem;

@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { CSSTransition } from 'react-transition-group';
-import { Question, AnswerContainer } from './StyledComponents/StyledComponents';
+import { CSSTransition, Transition } from 'react-transition-group';
+import { AnswerContainer } from './StyledComponents/StyledComponents';
 import { InputOne, InputTwo, InputThree, InputFour } from './Answer/Inputs';
 import Answer from './Answer/Answer';
+import Question from './Question/Question';
 
 class PageOne extends Component {
   state = {
@@ -13,12 +14,20 @@ class PageOne extends Component {
     toggleQuestion: false
   };
 
+  componentDidMount() {
+    this.setState(prevState => {
+      return {
+        toggleQuestion: !prevState.toggleQuestion
+      };
+    });
+  }
+
   onSubmit = event => {
     event.preventDefault();
     if (this.state.answer === true) {
       this.props.theScore();
     }
-    this.setState({ toggleQuestion: true });
+    this.setState({ toggleQuestion: !this.state.toggleQuestion });
     setTimeout(() => {
       this.props.history.push('/page-two');
     }, 1000);
@@ -28,16 +37,7 @@ class PageOne extends Component {
     return (
       <div className="App">
         <AnswerContainer onSubmit={this.onSubmit}>
-          <CSSTransition
-            classNames={'fade-slide'}
-            mountOnEnter
-            unmountOnExit
-            in={!this.state.toggleQuestion}
-          >
-            <section style={{ gridColumn: '1 / 3', gridRow: '1 / 3' }}>
-              <Question>ASDF?</Question>
-            </section>
-          </CSSTransition>
+          <Question active={this.state.toggleQuestion}>ASDF</Question>
 
           <Answer>
             <InputOne changed={() => this.setState({ answer: true })} />
