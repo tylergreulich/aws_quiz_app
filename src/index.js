@@ -2,7 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import PageOne from './components/PageOne';
+
+import QuestionOne from './components/QuestionOne';
+import QuestionTwo from './components/QuestionTwo';
+import QuestionThree from './components/QuestionThree';
+import QuestionFour from './components/QuestionFour';
+import QuestionFive from './components/QuestionFive';
+import Results from './components/ResultsPage';
+
 import registerServiceWorker from './registerServiceWorker';
 
 import { Provider } from 'react-redux';
@@ -19,7 +26,12 @@ const Root = () => (
   <BrowserRouter>
     <div>
       <Route exact path="/" component={App} />
-      <Route exact path="/page-one" component={PageOne} />
+      <Route exact path="/question-one" component={QuestionOne} />
+      <Route exact path="/question-two" component={QuestionTwo} />
+      <Route exact path="/question-three" component={QuestionThree} />
+      <Route exact path="/question-four" component={QuestionFour} />
+      <Route exact path="/question-five" component={QuestionFive} />
+      <Route exact path="/results" component={Results} />
     </div>
   </BrowserRouter>
 );

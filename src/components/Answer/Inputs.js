@@ -10,7 +10,7 @@ export const InputOne = props => (
       name="group1"
       onChange={props.changed}
     />
-    <div>1</div>
+    {props.children}
   </Aux>
 );
 
@@ -22,7 +22,7 @@ export const InputTwo = props => (
       name="group1"
       onChange={props.changed}
     />
-    <div>2</div>
+    {/* <div>2</div> */}
   </Aux>
 );
 
@@ -34,13 +34,18 @@ export const InputThree = props => (
       name="group1"
       onChange={props.changed}
     />
-    <div>3</div>
+    {/* <div>3</div> */}
   </Aux>
 );
 
 export const InputFour = props => (
   <Aux>
-    <StyledInput type="radio" value="4" name="group1" />
-    <div>4</div>
+    <StyledInput
+      type="radio"
+      value="4"
+      name="group1"
+      onChange={props.changed}
+    />
+    {/* <div>4</div> */}
   </Aux>
 );

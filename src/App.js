@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Link } from 'react-router-dom';
-import { CSSTransition } from 'react-transition-group';
+import { withRouter } from 'react-router-dom';
 import './App.css';
 import {
   AppCard,
@@ -40,7 +39,7 @@ class App extends Component {
     }
 
     if (this.state.countdown === 0) {
-      this.props.history.push('/page-one');
+      this.props.history.push('/question-one');
     }
 
     return (
@@ -63,4 +62,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);

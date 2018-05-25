@@ -1,9 +1,12 @@
 import React from 'react';
+import { LabelContainer } from '../StyledComponents/StyledComponents';
 
-const answer = props => (
-  <div style={{ textAlign: 'center' }}>
-    <label>{props.children}</label>
-  </div>
-);
+const answer = props => {
+  return (
+    <LabelContainer>
+      <label>{props.children}</label>
+    </LabelContainer>
+  );
+};
 
 export default answer;

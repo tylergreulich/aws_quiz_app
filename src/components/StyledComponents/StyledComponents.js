@@ -2,14 +2,22 @@ import styled from 'styled-components';
 
 export const AnswerContainer = styled.form`
   display: grid;
-  grid-template: 15rem 15rem / 40rem 40rem;
+  grid-template: 20rem 15rem 15rem / 40rem 40rem;
+  grid-gap: 1rem;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
   width: 100%;
   margin: 0 auto;
   background: linear-gradient(to right, #c33764, #1d2671);
 `;
+
+export const ResultsContainer = AnswerContainer.extend`
+  display: flex;
+`;
+
+// Question
 
 export const Question = styled.h2`
   font-size: 3.4rem;
@@ -21,7 +29,6 @@ export const Question = styled.h2`
 
 export const QuestionContainer = styled.section`
   grid-column: 1 / 3;
-  grid-row: 1 / 3;
 `;
 
 export const StyledInput = styled.input`
@@ -54,6 +61,8 @@ export const AppCard = styled.section`
   align-items: center;
 `;
 
+// Title
+
 export const TitleContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -70,6 +79,8 @@ export const Title = styled.h2`
 export const Countdown = Title.extend`
   font-size: 6rem;
 `;
+
+// Button
 
 export const ToggleContainer = styled.div`
   display: flex;
@@ -95,5 +106,21 @@ export const ToggleButton = styled.a`
   &:focus {
     background-color: #c1c1c1;
     outline: none;
+  }
+`;
+
+// Label
+
+export const LabelContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  border: 2px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  label {
+    text-align: center;
   }
 `;

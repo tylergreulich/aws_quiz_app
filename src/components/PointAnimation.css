@@ -1,0 +1,29 @@
+.off {
+  position: absolute;
+  opacity: 0;
+  transform: translate(68rem, 35.9rem);
+}
+
+.togglePoints {
+  animation: points 1s ease-out forwards;
+}
+
+@keyframes points {
+  0% {
+    transform: translate(68rem, 35.9rem);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translate(68rem, 18.5rem) scale(10);
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(68rem, -1rem) scale(8);
+  }
+}
