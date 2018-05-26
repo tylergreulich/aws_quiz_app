@@ -6,6 +6,7 @@ import { AnswerContainer } from './StyledComponents/StyledComponents';
 import { InputOne, InputTwo, InputThree, InputFour } from './Answer/Inputs';
 import Answer from './Answer/Answer';
 import Question from './Question/Question';
+import { ToggleButton } from './StyledComponents/StyledComponents';
 
 class QuestionFive extends Component {
   state = {
@@ -87,7 +88,9 @@ class QuestionFive extends Component {
           </Answer>
 
           <div style={{ textAlign: 'center', gridColumn: '1 / -1' }}>
-            <input type="submit" value="Submit" />
+            <ToggleButton type="submit" onClick={this.onSubmit}>
+              Next
+            </ToggleButton>
           </div>
         </AnswerContainer>
       </div>

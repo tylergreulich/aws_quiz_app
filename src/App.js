@@ -13,7 +13,7 @@ import {
 
 class App extends Component {
   state = {
-    countdown: 5,
+    countdown: 3,
     displayCountdown: false
   };
 
