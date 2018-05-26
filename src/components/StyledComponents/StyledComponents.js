@@ -74,6 +74,16 @@ export const Title = styled.h2`
   font-size: 4.4rem;
   color: #e4e5e6;
   letter-spacing: 0.15rem;
+
+  @media (max-width: 870px) {
+    letter-spacing: 0px;
+    font-size: 3.5rem;
+  }
+
+  @media (max-width: 650px) {
+    letter-spacing: 0px;
+    font-size: 2.75rem;
+  }
 `;
 
 export const Countdown = Title.extend`
